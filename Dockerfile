@@ -1,4 +1,4 @@
-# Stage 1: Build the Vite application
+# Stage 1: Build the Vite applications
 FROM node:18-alpine AS build
 
 # Set the working directory in the container
