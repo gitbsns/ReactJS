@@ -17,6 +17,8 @@ pipeline{
         stage("docker run container"){
         steps{
             echo "Deploye The Container"
+            sh "docker stop vitalapp || true"
+            sh "docker rm -f vitalapp || true"
             sh "docker run -d --name vitalapp -p 80:80 vital-app"
         }
         }
