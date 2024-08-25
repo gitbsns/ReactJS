@@ -14,7 +14,7 @@ pipeline{
             sh "docker build -t vital-app ."
         }
         }
-        stage("dockere run container"){
+        stage("docker run container"){
         steps{
             echo "Deploye The Container"
             sh "docker run -d --name vitalapp -p 80:80 vital-app"
