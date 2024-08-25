@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("git clone code"){
+        stage("git clone the code"){
         steps{
             echo "Clone The Code"
             git url:"https://github.com/gitbsns/ReactJS.git", branch: "main" 
