@@ -11,15 +11,15 @@ pipeline{
         stage("docker build image"){
         steps{
             echo "Build The Image"
-           sudo sh "docker build -t vital-app ."
+            sh "docker build -t vital-app ."
         }
         }
         stage("docker run container"){
         steps{
             echo "Deploye The Containers"
-           sudo sh "docker stop vitalapp || true"
-           sudo sh "docker rm -f vitalapp || true"
-           sudo sh "docker run -d --name vitalapp -p 80:80 vital-app"
+           sh "docker stop vitalapp || true"
+           sh "docker rm -f vitalapp || true"
+           sh "docker run -d --name vitalapp -p 80:80 vital-app"
         }
         }
     }
