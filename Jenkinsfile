@@ -4,7 +4,7 @@ pipeline{
         stage("git clone the code"){
         steps{
             echo "Clone The Code"
-            sudo git url:"https://github.com/gitbsns/ReactJS.git", branch: "main" 
+            git url:"https://github.com/gitbsns/ReactJS.git", branch: "main" 
             
         }
         }
