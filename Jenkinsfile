@@ -19,7 +19,7 @@ pipeline{
             echo "Deploye The Containers"
            sh "docker stop vitalapp || true"
            sh "docker rm -f vitalapp || true"
-           sh "docker run -d --name vitalapp -p 8300:8300 vital-app"
+           sh "docker run -d --name vitalapp -p 80:80 vital-app"
         }
         }
     }
