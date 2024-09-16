@@ -1,7 +1,7 @@
 # Stage 1: Build the Vite application
 FROM node:18-alpine AS build
 
-# Set the working directory in the container
+# Setting the working directory in the container
 WORKDIR /app
 
 # Copy package.json and package-lock.json or yarn.lock if using yarn
